@@ -1,0 +1,130 @@
+@font-face {
+  font-family: 'CircularStd';
+  src: url('./assets/circular-std-2.ttf') format('truetype');
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: white;
+  font-family: 'CircularStd', Arial, sans-serif;
+  background: #030303;
+}
+
+.titleBar {
+  height: 50px;
+  width: 100vw;
+  top: 0;
+  -webkit-app-select: none;
+  -webkit-app-region: drag;
+  position: absolute;
+}
+
+.background_login{
+  background-image: url("./assets/background_login.png");
+  background: cover;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+input[type="range"] {
+  height: 4px;
+  appearance: none;
+  width: 100%;
+  margin: 2px;
+  border-radius: 8px;
+  transition: 0.2s ease;
+  background-color: #5e5e5e;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* display: none; */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+input[type="range"]:hover {
+  background: green;
+}
+
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: white;
+}
+
+
+p{
+  font-weight: 200;
+}
+
+.loginWrapper{
+  background-color: rgba(19, 27, 48, 0.5);
+  backdrop-filter: blur(5px);
+  user-select: none;
+}
+
+.fadeInOpen{
+  animation: anim 0.6s ease-in-out;
+}
+
+.sidebarHeight{
+  height: calc(100vh - 235px);
+}
+
+.mainHeight{
+  height: calc(100vh - 130px);
+}
+
+.shadowBlack {
+  box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.75);
+
+}
+
+.topResult{
+  transition: all 0.5s ease-in-out;
+}
+
+.topResultPlayButton{
+  animation: slideUp 0.4s ease-in-out;
+}
+
+.topResultPlay {
+  transition: all 0.3s ease-in-out;
+}
+
+.topResultPlay:hover{
+  scale: 1.1;
+}
+
+@keyframes slideUp {
+  from{
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+@keyframes anim {
+  from{
+    opacity: 0%;
+  }
+
+  to{
+    opacity: 100%;
+  }
+}

@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'CircularStd';
+  src: url('./assets/circular-std-2.ttf') format('truetype');
+}
+
+#root {
+  margin: 0 ;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'CircularStd', Arial, sans-serif;
+  overflow: hidden
+}
+
+.backgroundMain{
+  background-image: url("./assets/bg.jpg");
+  background: cover;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  
+}
+
+.loginWrapper {
+  background-color: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(6px);
+  user-select: none;
+}
+
+.login{
+   box-shadow: 0px 0px 1000px #000000;
+   animation: fadeIn 0.2s ease-in-out;
+}
+
+.login .div, .login form {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.register{
+   box-shadow: 0px 0px 1000px #000000;
+   animation: fadeIn_big 0.2s ease-in-out;
+}
+
+.register .div, .register form {
+  animation: fadeIn_big 0.6s ease-in-out;
+}
+
+.popup{
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  transform: translateY(-1000px);
+  transition: all 0.3s ease-in-out;
+}
+
+.white_shadow{
+  box-shadow: 0px 0px 10px #27ac18;
+}
+
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+    height: 0;
+  }
+  to{
+    opacity: 1;
+    height: 300px;
+  }
+}
+
+@keyframes fadeIn_big {
+  from{
+    opacity: 0;
+    height: 0;
+  }
+  to{
+    opacity: 1;
+    height: 400px;
+  }
+}
